@@ -14,6 +14,10 @@ In this repository contains a file named `ray-c45.ipynb.` This Jupyter notebook 
 
 Because decision trees are essentially a JSONStree, we need an algorithm to traverse it to make a prediction regarding a data point. This algorithm is as simple as a breadth-first-search, located in `Classifier.py`
 
+## Dataset
+
+Of course, we cannot perform any machine learning algorithms without a dataset. For this problem, I chose the abalone dataset from the UCI Machine Learning Repository [located here](https://archive.ics.uci.edu/ml/datasets/abalone).
+
 ### Results
 
 We see mixed results in our implementation. One, our generation has a noticable speed increase. Two, our classification process does not see any improvement. This is probably due to tree traversal being relatively quick in the first place, and thus Ray's overhead mitigates any benefits from parallelization.
